@@ -41,7 +41,8 @@ public class BaseClass {
 //	public void BC(String BROWSER) throws Throwable {
 
 	public void BC() throws Throwable {
-	String BROWSER = flib.getCommonData("browser");
+		String BROWSER =System.getProperty("browser");	
+	//String BROWSER = flib.getCommonData("browser");
 	//	String BROWSER = System.getProperty("browser");
 
 		if (BROWSER.equalsIgnoreCase("chrome")) {
@@ -64,8 +65,10 @@ public class BaseClass {
 		wlib.loadTheElements(driver);
 
 		String URL = flib.getCommonData("url");
-		String USERNAME = flib.getCommonData("username");
-		String PASSWORD = flib.getCommonData("password");
+		String USERNAME =System.getProperty("username");	
+		String PASSWORD =System.getProperty("password");	
+		//String USERNAME = flib.getCommonData("username");
+		//String PASSWORD = flib.getCommonData("password");
 		driver.get(URL);
 
 		// using Business Logics
